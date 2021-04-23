@@ -1,0 +1,162 @@
+syntax = "proto3";
+
+package shop.admin.v1;
+
+import "google/api/annotations.proto";
+
+option go_package = "api/shop/admin/v1;v1";
+
+
+service ShopAdmin {
+    rpc Login (LoginReq) returns (LoginReply) {
+        option (google.api.http) = {
+            get: "/admin/v1/login/"
+            body: "*"
+        };
+    }
+
+    rpc Logout (LogoutReq) returns (LogoutReply) {
+        option (google.api.http) = {
+            get: "/admin/v1/logout/"
+            body: "*"
+        };
+    }
+
+    rpc ListBeer (ListBeerReq) returns (ListBeerReply) {
+        option (google.api.http) = {
+            get: "/admin/v1/catalog/beers/"
+            body: "*"
+        };
+    }
+
+    rpc CreateBeer (CreateBeerReq) returns (CreateBeerReply) {
+        option (google.api.http) = {
+            post: "/admin/v1/catalog/beers/"
+            body: "*"
+        };
+    }
+
+    rpc UpdateBeer (UpdateBeerReq) returns (UpdateBeerReply) {
+        option (google.api.http) = {
+            put: "/admin/v1/catalog/beers/{id}"
+            body: "*"
+        };
+    }
+
+    rpc DeleteBeer (DeleteBeerReq) returns (DeleteBeerReply) {
+        option (google.api.http) = {
+            delete: "/admin/v1/catalog/beers/{id}"
+            body: "*"
+        };
+    }
+
+    rpc ListOrder (ListOrderReq) returns (ListOrderReply) {
+        option (google.api.http) = {
+            get: "/admin/v1/orders/"
+            body: "*"
+        };
+    }
+
+    rpc GetOrder (GetOrderReq) returns (GetOrderReply) {
+        option (google.api.http) = {
+            post: "/admin/v1/orders/"
+            body: "*"
+        };
+    }
+
+    rpc ListCustomer (ListCustomerReq) returns (ListCustomerReply) {
+        option (google.api.http) = {
+            get: "/admin/v1/customers/"
+            body: "*"
+        };
+    }
+
+    rpc GetCustomer (GetCustomerReq) returns (GetCustomerReply) {
+        option (google.api.http) = {
+            post: "/admin/v1/customers/{id}"
+            body: "*"
+        };
+    }
+}
+
+message LoginReq {
+    string username = 1;
+    string password = 2;
+}
+
+message LoginReply {
+
+}
+
+message LogoutReq {
+
+}
+
+message LogoutReply {
+
+}
+
+message ListBeerReq {
+
+}
+
+message ListBeerReply {
+
+}
+
+message CreateBeerReq {
+
+}
+
+message CreateBeerReply {
+
+}
+
+message UpdateBeerReq {
+
+}
+
+message UpdateBeerReply {
+
+}
+
+message DeleteBeerReq {
+
+}
+
+message DeleteBeerReply {
+
+}
+
+message ListOrderReq {
+
+}
+
+message ListOrderReply {
+
+}
+
+message GetOrderReq {
+
+}
+
+message GetOrderReply {
+
+}
+
+message ListCustomerReq {
+
+}
+
+message ListCustomerReply {
+
+}
+
+message GetCustomerReq {
+
+}
+
+message GetCustomerReply {
+
+}
+
